@@ -1,0 +1,18 @@
+{#
+/**
+ * @file
+ * Default theme implementation for the button shortcode.
+ *
+ * Available variables:
+ * - attributes: The attributes array.
+ * - text: Container Shortcode.
+ * - container: container class.
+ */
+#}
+<div{{ attributes }}>
+    <div class="{{ container }}" >
+        <div class="row">
+            {{ text|raw }}
+        </div>
+    </div>
+</div>

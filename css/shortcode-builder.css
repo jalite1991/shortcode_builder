@@ -1,0 +1,110 @@
+.container-long {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.bfb-drag {
+    min-height: 20px;
+    background-color: #eaeaea;
+    cursor: move;
+    padding: 5px 15px;
+    margin: auto -15px;
+    position: static;
+}
+
+.bfb-content {
+    min-height: 30px;
+}
+
+.bfb-padding-block {
+    padding: 15px;
+}
+
+.portlet-placeholder {
+    min-height: 45px;
+    border: 1px dashed #999999;
+    margin-bottom: 5px;
+}
+
+.bfb-wrapper {
+    min-height: 10px;
+    border: 1px solid #ccc;
+}
+
+
+/** level styles */
+#bfb-builder.bfb-wrapper {
+    padding: 5px;
+    background-color: black;
+}
+
+/** container */
+.bfb-container {
+    min-height: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    margin-bottom: 15px;
+}
+
+.bfb-container-header.bfb-drag {
+    background-color: #81b3ff;
+}
+
+.bfb-add-container a {
+    padding: 5px;
+    display: inline-block;
+}
+
+.bfb-add-container i {
+    margin-right: 5px;
+}
+
+/** outer columns */
+.outer-columns-container {
+    padding: 0 0 15px;
+}
+
+.bfb-outer-column .bfb-outer-column-header.bfb-drag {
+    cursor: default;
+}
+
+/** rows */
+.row-body {
+    padding: 0px;
+}
+
+.bfb-row-header.bfb-drag {
+    background-color: #E57373;
+}
+
+/** columns */
+.bfb-column.bfb-wrapper {
+    margin-bottom: 0;
+}
+.bfb-column .bfb-column-header.bfb-drag  {
+    cursor: default;
+    background-color: #ececec;
+    text-align: center;
+}
+
+/** modules */
+.bfb-module .bfb-module-header.bfb-drag  {
+    color: #ccc;
+    background-color: #000000;
+    text-align: center;
+}
+
+.bfb-module .bfb-module-header.bfb-drag a {
+    color: #fff;
+    float: left;
+}
+
+
+
+
+/** Modal */
+.shortcode-modal {
+    width: 70vw !important;
+}

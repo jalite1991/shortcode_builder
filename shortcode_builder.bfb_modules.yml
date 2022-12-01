@@ -1,0 +1,17 @@
+modules:
+  #name of module
+  text:
+    # form that controls
+    form: Drupal\shortcode_builder\Form\BaseForm
+    # Boolean to determine if module allows for text between an open and closing tag, or if it is a self closing tag
+    has_text: true
+    text_field: content
+    # Shortcode attributes you need passed to twig file
+    attributes:
+    # theme function or controller used to render module
+    callback:
+  image:
+    form: 'Drupal\shortcode_builder\Form\BaseForm'
+    has_text: false
+    attributes:
+    callback:

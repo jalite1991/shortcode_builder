@@ -1,0 +1,51 @@
+# Default Form Locations
+shortcode_builder.container_form:
+  path: '/scb/form/bfb_container'
+  defaults:
+    _form: 'Drupal\shortcode_builder\Form\ContainerForm'
+    _title: 'Container Form'
+  requirements:
+    _permission: 'administer nodes'
+
+shortcode_builder.row_form:
+  path: '/scb/form/bfb_row'
+  defaults:
+    _form: 'Drupal\shortcode_builder\Form\RowForm'
+    _title: 'Row Form'
+  requirements:
+    _permission: 'administer nodes'
+
+shortcode_builder.column_form:
+  path: '/scb/form/bfb_column'
+  defaults:
+    _form: 'Drupal\shortcode_builder\Form\ColumnForm'
+    _title: 'Column Form'
+  requirements:
+    _permission: 'administer nodes'
+
+shortcode_builder.bfb_module:
+  path: '/scb/form/module/{mid}'
+  defaults:
+    _form: 'Drupal\shortcode_builder\Form\WidgetForm'
+    mid: null
+  requirements:
+    _permission: 'administer nodes'
+
+#Ajax forms
+shortcode_builder.ajax_form.module_form:
+  path: '/scb/form/{method}/module/{mid}'
+  defaults:
+    _controller: 'Drupal\shortcode_builder\Controller\WidgetForm::ajaxEventDetails'
+    mid: null
+  requirements:
+    _permission: 'administer nodes'
+    method: 'nojs|ajax'
+
+shortcode_builder.ajax_form.new_element_form:
+  path: '/scb/{method}/add/{element}/{entity_type}/{entity_id}'
+  defaults:
+    _form: 'Drupal\shortcode_builder\Form\AddNewElement'
+    mid: null
+  requirements:
+    _permission: 'administer nodes'
+    method: 'nojs|ajax'

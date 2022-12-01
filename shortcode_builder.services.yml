@@ -1,0 +1,4 @@
+services:
+  plugin.shortcode_builder.module_manager:
+    class: Drupal\shortcode_builder\WidgetManager
+    parent: default_plugin_manager

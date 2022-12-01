@@ -1,0 +1,31 @@
+base:
+  css:
+    theme:
+      css/customized-bootstrap.css: {}
+      css/shortcode-builder.css: {}
+      css/font-awesome.min.css: {}
+  js:
+    js/myObject.js: {}
+    js/shortcodeBuilder.js: {}
+    js/shortcode-parser.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/jquery.ui.sortable
+    - core/drupal
+    - core/drupalSettings
+    - core/drupal.dialog.ajax
+
+edit_page:
+  js:
+    js/shortcode-builder.js: {}
+  dependencies:
+    - shortcode_builder/base
+
+edit_form:
+  css:
+    theme:
+      css/edit-form.css: {}
+  js:
+    js/random.js: {}
+

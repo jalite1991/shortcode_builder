@@ -1,0 +1,32 @@
+.module-edit-tabs > .form-type-vertical-tabs > .vertical-tabs {
+
+}
+
+.module-edit-tabs > .form-type-vertical-tabs > .vertical-tabs > .nav-tabs {
+    float: none;
+    width: initial;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    padding-bottom: 0;
+    margin-left: -1px;
+}
+
+.module-edit-tabs > .form-type-vertical-tabs > .vertical-tabs > .nav-tabs  > li {
+    display: table-cell;
+    width: 100%;
+    text-align: center;
+}
+
+.module-edit-tabs > .form-type-vertical-tabs > .vertical-tabs > .nav-tabs  > li a {
+    border-radius: 4px 4px 0 0;
+    margin-bottom: 0;
+}
+
+.module-edit-tabs > .form-type-vertical-tabs > .vertical-tabs > .nav-tabs  > li.active a {
+    border-color: #ddd #ddd rgba(221, 221, 221, 0) #ddd;
+}
+
+.module-edit-tabs > .form-type-vertical-tabs > .vertical-tabs > .vertical-tabs-panes {
+    border-radius: 0 0 4px 4px;
+}
