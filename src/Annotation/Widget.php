@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Contains \Drupal\shortcode_builder\Plugin\Annotation\Widget.
@@ -22,7 +23,8 @@ use Drupal\Component\Annotation\Plugin;
  *
  * @Annotation
  */
-class Widget extends Plugin {
+class Widget extends Plugin
+{
 
   /**
    * The plugin ID.
@@ -89,5 +91,4 @@ class Widget extends Plugin {
    * @var array (optional)
    */
   public $settings = array();
-
 }

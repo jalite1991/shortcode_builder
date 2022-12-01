@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Contains Drupal\shortcode_builder\Form\BaseForm
@@ -123,13 +124,13 @@ class BaseForm extends Formbase
     );
 
     $form['submit'] = array(
-        '#markup' => '<div id="shortcode-submit" class="button js-form-submit form-submit"> Save </div>',
-        '#allowed_tags' => ['div'],
-      );
-//    $form['actions']['test'] = array(
-//      '#type' => 'submit',
-//      '#value' => $this->t('Save'),
-//    );
+      '#markup' => '<div id="shortcode-submit" class="button js-form-submit form-submit"> Save </div>',
+      '#allowed_tags' => ['div'],
+    );
+    //    $form['actions']['test'] = array(
+    //      '#type' => 'submit',
+    //      '#value' => $this->t('Save'),
+    //    );
 
     return $form;
   }
@@ -141,7 +142,6 @@ class BaseForm extends Formbase
       $form_state->setErrorByName('email', t('The email address %mail is not valid', array('%mail' => $value)));
       return;
     }
-
   }
 
   /**
@@ -154,5 +154,4 @@ class BaseForm extends Formbase
 
     drupal_set_message(t('Thank You for the RSVP'));
   }
-
 }

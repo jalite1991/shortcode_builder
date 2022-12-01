@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Contains \Drupal\shortcode_builder\Ajax\SlideDownCommand.php
@@ -23,7 +24,8 @@ use Drupal\Core\Ajax\CommandInterface;
  *
  * @ingroup ajax
  */
-class AddBuilderElementCommand implements CommandInterface {
+class AddBuilderElementCommand implements CommandInterface
+{
 
   /**
    * A CSS id string.
@@ -63,7 +65,8 @@ class AddBuilderElementCommand implements CommandInterface {
    * @param string|integer $type
    *   A string or number determining how long the animation will run.
    */
-  public function __construct($id, $type, $plugin_type = NULL) {
+  public function __construct($id, $type, $plugin_type = NULL)
+  {
     $this->id = $id;
     $this->type = $type;
     $this->plugin_type = $plugin_type;
@@ -72,7 +75,8 @@ class AddBuilderElementCommand implements CommandInterface {
   /**
    * Implements Drupal\Core\Ajax\CommandInterface:render().
    */
-  public function render() {
+  public function render()
+  {
 
     return array(
       'command' => 'addBuilderElement',

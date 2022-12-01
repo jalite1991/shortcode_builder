@@ -1,9 +1,11 @@
 <?php
+
 /**
  * Implements hook_schema().
  *
  */
-function shortcode_builder_schema() {
+function shortcode_builder_schema()
+{
   $schema['shortcode_builder__element'] = array(
     'description' => 'Serialized data ',
     'fields' => array(

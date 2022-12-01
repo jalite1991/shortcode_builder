@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Contains Drupal\shortcode_builder\Form\BaseForm
@@ -7,7 +8,6 @@
 namespace Drupal\shortcode_builder\Form;
 
 use Drupal\Core\Ajax\AjaxResponse;
-use Drupal\Core\Ajax\OpenModalDialogCommand;
 use Drupal\Core\Ajax\CloseModalDialogCommand;
 use Drupal\Core\Database\Database;
 use Drupal\Core\Form\Formbase;
@@ -37,7 +37,7 @@ class AddNewElement extends Formbase
 
 
       // $uuid = \Drupal::entityTypeManager()->getStorage($entity_type)->load($entity_id)->uuid();
-      $uuid = rand(0,100);
+      $uuid = rand(0, 100);
       $form['uuid'] = [
         '#type' => 'hidden',
         '#value' => $uuid,
@@ -110,7 +110,7 @@ class AddNewElement extends Formbase
           $plugins = $type->getDefinitions();
           $subtypes = array();
 
-          foreach ($plugins as $key => $value ) {
+          foreach ($plugins as $key => $value) {
             $subtypes[$key] = $value['title'];
           }
 
@@ -153,7 +153,6 @@ class AddNewElement extends Formbase
 
       return;
     }
-
   }
 
   /**
@@ -162,11 +161,11 @@ class AddNewElement extends Formbase
    */
   public function submitForm(array &$form, FormStateInterface $form_state)
   {
-
   }
 
 
-  public function ajaxContainerSubmit(array &$form, FormStateInterface $form_state) {
+  public function ajaxContainerSubmit(array &$form, FormStateInterface $form_state)
+  {
     $row_array = array(
       'type' => $form_state->getValue('type'),
       'plugin_type' => $form_state->getValue('rows'),
@@ -185,15 +184,16 @@ class AddNewElement extends Formbase
     // Response
     $response = new AjaxResponse();
 
-    $response->addCommand(new CloseModalDialogCommand( ) );
-    $response->addCommand(new AddBuilderElementCommand($eid, $row_array['type'], $row_array['plugin_type'] ));
+    $response->addCommand(new CloseModalDialogCommand());
+    $response->addCommand(new AddBuilderElementCommand($eid, $row_array['type'], $row_array['plugin_type']));
 
 
     return $response;
   }
 
 
-  public function ajaxModuleSubmit(array &$form, FormStateInterface $form_state) {
+  public function ajaxModuleSubmit(array &$form, FormStateInterface $form_state)
+  {
     $row_array = array(
       'type' => $form_state->getValue('type'),
       'plugin_type' => $form_state->getValue('subtype'),
@@ -212,12 +212,11 @@ class AddNewElement extends Formbase
     // Response
     $response = new AjaxResponse();
 
-//    $response->addCommand(new OpenModalDialogCommand( $form_state->getValue('subtype') . " Widget Configuration Form", array("#markup" => $eid), array("dialogClass"=>"shortcode-modal") ));
-    $response->addCommand(new CloseModalDialogCommand( ) );
-    $response->addCommand(new AddBuilderElementCommand($eid, $row_array['type'], $row_array['plugin_type'] ));
+    //    $response->addCommand(new OpenModalDialogCommand( $form_state->getValue('subtype') . " Widget Configuration Form", array("#markup" => $eid), array("dialogClass"=>"shortcode-modal") ));
+    $response->addCommand(new CloseModalDialogCommand());
+    $response->addCommand(new AddBuilderElementCommand($eid, $row_array['type'], $row_array['plugin_type']));
 
 
     return $response;
   }
-
 }
